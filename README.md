@@ -1,10 +1,8 @@
-# MySetup
+## MySetup
 
 
 
-MySetup on Ubuntu
-
-	Prerequisito 	
+	Prerequisite 	
 		install git
 		install python3
 		install ansible
