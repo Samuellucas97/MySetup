@@ -1,0 +1,22 @@
+- hosts: localhost
+  tasks:
+
+
+    - name: install basic packages 
+      apt: name={{item}} state=present
+      with_items:
+        - curl
+        - net-tools
+        - htop
+
+    - name: install Java JDK 17
+      apt: name=openjdk-17-jdk state=present
+
+    - name: install VSCode IDE
+      snap: name=code state=present
+
+    # - name: install Oh My Bash
+
+    # - name: install Chrome
+
+    

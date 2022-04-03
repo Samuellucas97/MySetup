@@ -1,0 +1,14 @@
+name: Checking Ansible files
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  
+      
+      - name: Lint Ansible Playbook
+        uses: ansible-community/ansible-lint-action@main
