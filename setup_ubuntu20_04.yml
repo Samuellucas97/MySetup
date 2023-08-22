@@ -1,22 +1,29 @@
 - hosts: localhost
+  vars:
+    - java_jdk_version: 17
+  
   tasks:
-
-
     - name: install basic packages 
-      apt: name={{item}} state=present
+      apt: >
+        name={{item}} 
+        state=present
       with_items:
         - curl
         - net-tools
         - htop
 
-    - name: install Java JDK 17
-      apt: name=openjdk-17-jdk state=present
+    - name: install Java JDK 
+      apt: > 
+        name=openjdk-{{java_jdk_version}}-jdk 
+        state=present
 
     - name: install VSCode IDE
-      snap: name=code state=present
+      snap: >
+        name=code 
+        state=present
 
     # - name: install Oh My Bash
-
+    - 
     # - name: install Chrome
 
     

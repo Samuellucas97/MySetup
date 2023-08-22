@@ -1,0 +1,6 @@
+
+
+```
+$ vagrant init monsenso/macos-10.13
+$ vagrant up
+```
